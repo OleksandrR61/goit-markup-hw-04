@@ -22,8 +22,13 @@
   --color-link-hover: #2196f3;
   --color-link-contact-header: #757575;
   --color-link-contact-footer: rgba(255, 255, 255, 0.6);
+  --color-icon-header: #757575;
+  --color-icon-link: #afb1b8;
+  --color-icon-link-hover: #ffffff;
+  --color-icon-link-footer: #ffffff;
+  --color-icon-link-hover: #ffffff;
   --color-border-header: #ececec;
-  --color-border-example-title: #ececec;
+  --color-border-example-title: #eeeeee;
 }
 
 /* Базовые стили*/
@@ -106,6 +111,7 @@ ul {
 
   font-size: 36px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
 
   margin-bottom: 50px;
 }
@@ -124,6 +130,7 @@ ul {
   cursor: pointer;
 
   border-radius: 4px;
+  border: none;
   text-align: center;
   min-width: 73px;
 }
@@ -140,8 +147,7 @@ ul {
 
 .header-container {
   display: flex;
-  align-items: center;
-  
+  align-items: center;  
 }
 
 .header .logo {
@@ -172,10 +178,34 @@ ul {
   color: var(--color-link-contact-header);
 
   letter-spacing: 0.02em;
+
+  display: flex;
+  align-items: center;
 }
 
 .contact-header:not(:last-child) {
   margin-right: 50px;
+}
+
+.icon-header {
+  fill: var(--color-icon-header);
+  margin-right: 10px;
+}
+
+.link:hover .icon-header,
+.link:focus .icon-header,
+.link:visited .icon-header {
+  fill: currentColor;
+}
+
+.icon-envelope {
+  width: 16px;
+  height: 12px;
+}
+
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
 }
 
 /* Подвал сайта */
@@ -186,6 +216,14 @@ ul {
   line-height: 1.714;
 
   padding: 60px 0px;
+}
+
+.footer-div {
+  display: flex;
+}
+
+.footer-address {
+  margin-right: 70px;
 }
 
 .footer .logo {
@@ -210,6 +248,27 @@ ul {
 
 .contact-footer:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.footer-title-link {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-text-address);
+
+  margin-bottom: 20px;
+}
+
+.footer .team-link {
+  color: var(--color-icon-link-footer);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .team-link:hover,
+.footer .team-link:focus {
+  color: var(--color-icon-link-hover);
+  background-color: var(--color-link-hover);
 }
 
 /* Стили главной страницы */
@@ -249,6 +308,7 @@ ul {
 .hero .button {
   color: var(--color-text-button-hero);
   background-color: var(--color-background-button-hero);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   font-weight: 700;
   line-height: 1.875;
@@ -275,6 +335,26 @@ ul {
   margin-right: 30px;
 }
 
+.benefit-div {
+  border-radius: 4px;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+.benefit-div-color {
+  background-color: var(--color-background-team);
+}
+
+.benefit-icon {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .benefit-list-item .title {
   font-size: 14px;
   line-height: 1.14;
@@ -294,8 +374,6 @@ ul {
   padding-top: 0px;
   text-align: center;
 }
-
-
 
 .doing-list {
   display: flex;
@@ -343,6 +421,79 @@ ul {
   margin-bottom: 10px;
 }
 
+.team-item-text {
+  margin-bottom: 16px;
+}
+
+.item-list-link {
+  display: flex;
+  justify-content: center;
+}
+
+.item-link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.team .team-link {
+  color: var(--color-icon-link);
+}
+
+.team .team-link:hover,
+.team .team-link:focus {
+  color: var(--color-icon-link-hover);
+  background-color: var(--color-link-hover);
+}
+
+.team-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: currentColor;
+}
+
+/* Постоянные клиенты */
+.client-list {
+  display: flex;
+}
+
+.client-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  color: var(--color-icon-link);
+  border: 1px solid var(--color-icon-link);
+  border-radius: 4px;
+}
+
+.client-link:hover,
+.client-link:focus {
+  color: var(--color-link-hover);
+  border-color: var(--color-link-hover);
+}
+
+.client-icon {
+  max-height: 60px;
+  fill: currentColor;
+}
+
 /* Стили страницы портфолио */
 
 /* Примеры работ */
@@ -364,7 +515,6 @@ ul {
 .example .button {
   background-color: var(--color-background-button-example);
   color: var(--color-text-button-example);
-  border-color: transparent;
 
   font-weight: 500;
   line-height: 1.62;
@@ -377,6 +527,9 @@ ul {
 .example .button:focus {
   background-color: var(--color-background-button-example-hover);
   color: var(--color-text-button-example-hover);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+              0px 1px 2px rgba(0, 0, 0, 0.08),
+              0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .example-list {
@@ -387,6 +540,13 @@ ul {
 
 .example-item {
   flex-basis: calc((100% - 60px) / 3);
+
+}
+
+.example-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+              0px 4px 4px rgba(0, 0, 0, 0.06),
+              1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .example-item-title {
