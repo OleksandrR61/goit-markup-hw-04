@@ -198,16 +198,6 @@ ul {
   fill: currentColor;
 }
 
-.icon-envelope {
-  width: 16px;
-  height: 12px;
-}
-
-.icon-smartphone {
-  width: 10px;
-  height: 16px;
-}
-
 /* Подвал сайта */
 .footer {
   background-color: var(--color-background-secondary);
@@ -341,16 +331,12 @@ ul {
   padding-top: 25px;
   padding-bottom: 25px;
   margin-bottom: 30px;
-}
 
-.benefit-div-color {
   background-color: var(--color-background-team);
 }
 
 .benefit-icon {
   display: block;
-  width: 70px;
-  height: 70px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -455,9 +441,6 @@ ul {
 }
 
 .team-icon {
-  width: 20px;
-  height: 20px;
-
   fill: currentColor;
 }
 
@@ -471,10 +454,8 @@ ul {
 }
 
 .client-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  width: 170px;
+  height: 92px;
   padding-top: 16px;
   padding-bottom: 16px;
 
@@ -490,7 +471,6 @@ ul {
 }
 
 .client-icon {
-  max-height: 60px;
   fill: currentColor;
 }
 
